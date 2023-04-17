@@ -1,0 +1,487 @@
+<html>
+
+	<meta charset="utf-8">
+	<head>
+		<link rel="imagenes/shortcut icon" href="imagenes/favicon.ico">
+		<title>Encripage</title>
+		<style>
+		  @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+		</style>
+	</head>
+
+	
+
+	<body>
+
+		<input size="40" type="text" name="Encriptar" placeholder="ingrese el texto aquí" id="texto" class="inputTexto" >
+
+		<img src="imagenes/DogeLentes.png" class="logo" />
+
+		<button class="boton1" type="button" name="Encriptar"><textarea class="textoBoton1" id="boton1" disabled>Encriptar</textarea></button>
+
+		<button class="boton2"><textarea class="textoBoton2" disabled>Desencriptar</textarea></button>
+
+		<img src="imagenes/exclamacion.png" class="exclamacion" />
+
+		<textarea class="rectangulo areaDeTexto" id="rectanguloTexto" disabled></textarea>
+
+		<img src="imagenes/Muñeco.svg" class="muñeco" id="imagen1">
+
+		<img src="imagenes/texto.png" class="textoExclamacion">
+ 
+		<img src="imagenes/Texto1.svg" class="textoMuneco" id="imagen2">
+
+		<img src="imagenes/Texto2.svg" class="textoMuneco2" id="imagen3">
+
+		<img src="imagenes/Rectangle 1.svg" class="rectangulo" id="rectanguloImagen">
+
+		<button class="copiar" id="copiar" onclick="copyToClipBoard()">Copiar</button>
+
+
+		
+
+	</body>
+
+
+<style>
+
+
+	.copiar{
+
+		position: absolute;
+		top: 84.5%;
+		left: 77.5%;
+		width: 250px;	
+		height: 67px;
+		border: none;
+		border-radius: 24px;	
+		
+		font-family: Chivo Mono;
+		font-size: 120%;
+		font-weight: 400;
+		background: #c2c2c2;
+
+		display: inline;
+
+	}
+
+
+
+	.textoBoton2 {
+
+		width: 280px;
+		height: 19px;
+
+		font-family: Chivo Mono;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 110%;
+		line-height: 14px;
+		text-align: center;
+
+		/* White */
+
+		color: black;
+		background: #a545ad;
+
+		/* Inside auto layout */
+
+		flex: none;;
+
+		border: none;
+		resize: none;		
+
+
+
+	}
+
+	.textoExclamacion{
+		position: absolute;
+		left: 20%;
+		right: 0%;
+		top: 81.5%;
+		bottom: 0%;
+	}
+
+	.textoMuneco2{
+
+		width: 19%;
+		height: 12%;
+
+		/* Gray/gray-500 */
+
+		color: #343A40;
+
+
+		/* Inside auto layout */
+
+		position: absolute;
+		left: 77%;
+		top: 70%;
+
+		border: none;
+	}
+
+	.textoMuneco{
+
+		width: 24%;
+		height: 7.5%;
+
+		text-align: center;
+
+		/* Gray/gray-500 */
+
+		color: #343A40;
+
+
+		/* Inside auto layout */
+
+		flex: none;
+		order: 0;
+		align-self: stretch;
+		flex-grow: 0;
+
+		position: absolute;
+		left: 74.5%;
+		top: 60%;
+
+		border: none;
+	}
+
+
+	.rectangulo{
+
+		position: absolute;
+		width: 23%;
+		height: 92%;
+		left: 75%;
+		top: 4%;
+
+		/* White */
+
+		background: #FFFFFF;
+
+		border-radius: 20px;
+
+		font-family: Arial; 
+		font-size: 190%; 
+		font-weight: 540; 
+		line-height: 90%; 
+		color: #6e6d6b;
+		z-index: -1;
+	}
+
+	.areaDeTexto{
+
+		border-radius: 0;
+		width: 21%;
+		left: 76.5%;
+		height: 88.1%;
+		top: 7%;
+		z-index: 0;
+		border: none;
+		resize: none;
+	}
+
+	.muñeco{
+		position: absolute;
+		width: 17%;
+		height: 30%;
+		left: 78%;
+		top: 30%;
+		z-index: 1;
+
+	}
+
+	body{
+		background: #E5E5E5;
+	}
+
+
+
+	.inputTexto::placeholder {
+		color: #0A3871;
+	}
+
+	input{
+		
+		font-family: Arial; 
+		font-size: 29px; 
+		font-weight: 300; 
+		line-height: 130%; 
+		font: #0A3871;"
+		width: 577px;
+		height: 48px;
+		top: 168px;
+		left: 240px;	
+		border-radius: 10px;
+		position: absolute;
+		background: #E5E5E5;
+		border-inline: none;
+		border-bottom: none;
+		border-top: none;
+
+	}
+
+	.logo{ 
+		left: -4.5%;  
+		top: -10%; 
+		bottom: 10%;
+		position: absolute;
+		scale: 23.5%;
+	}
+
+	.boton1{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 24px;
+		gap: 8px;
+
+		width: 328px;
+		height: 67px;
+
+		background: #25b8b3;
+		border: 1px solid #0A3871;
+		border-radius: 24px;
+
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+
+		position: absolute;
+		bottom: 0%;
+		top: 85%;
+		left: 18%;
+
+		border: none;
+	}
+
+	.boton2{
+		
+		/* Button */
+
+
+		box-sizing: border-box;
+
+		/* Auto layout */
+
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 24px;
+		gap: 8px;
+
+		width: 328px;
+		height: 67px;
+
+		/* Light gray */
+
+		background: #a545ad;
+		/* Dark blue/dark-blue-300 */
+
+		border: 1px solid #0A3871;
+		border-radius: 24px;
+
+		/* Inside auto layout */
+
+		flex: none;
+		order: 1;
+		flex-grow: 0;
+
+		position: absolute;
+		top: 85%;
+		left: 45%;
+
+		color: black;
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 129%;
+		line-height: 19px;
+		text-align: center;
+
+		border: none;
+
+		
+
+	}
+
+	.exclamacion{
+
+		position: absolute;
+		left: 18%;
+		right: 0%;
+		top: 81%;
+		bottom: 0%;
+	}
+
+	.textoBoton1{
+
+		width: 280px;
+		height: 19px;
+
+		font-family: Chivo Mono;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 170%;
+		line-height: 14px;
+		text-align: center;
+
+		/* White */
+
+		color: #FFFFFF;
+		background: #25b8b3;
+
+		/* Inside auto layout */
+
+		flex: none;
+		order: 0;
+		flex-grow: 1;
+
+		border: none;
+		resize: none;
+	}
+
+
+	.textoBoton1::-webkit-scrollbar {
+   		
+   		display: none;
+ 	}
+	
+
+
+	.textoBoton2::-webkit-scrollbar {
+   		
+   		display: none;
+ 	}
+
+ 	html{
+		max-height: 1440px;
+		min-height: 240px;
+
+		max-width: 2560px;
+		min-width: 426px;
+	}
+
+
+
+
+</style>
+
+
+</html>
+
+<script>
+	
+//La letra "e" es convertida para "enter"
+//La letra "i" es convertida para "imes"
+//La letra "a" es convertida para "ai"
+//La letra "o" es convertida para "ober"
+//La letra "u" es convertida para "ufat"
+
+
+
+	var button1 = document.querySelector(".boton1");
+	var button2 = document.querySelector(".boton2")
+	var input = document.querySelector(".inputTexto")
+	var caja = document.querySelector(".areaDeTexto")
+	var copiar = document.querySelector(".copiar")
+
+	
+	function Encriptar() {
+
+
+		input.value = input.value.replaceAll("e", "enter").replaceAll("i", "imes").replaceAll("a", "ai").replaceAll("o", "ober").replaceAll("u", "ufat");
+
+
+		document.getElementById("rectanguloTexto").textContent = input.value;
+
+
+
+		if (caja.value == "") {
+	
+			document.getElementById("imagen1").style.display = "inline";
+			document.getElementById("imagen2").style.display = "inline";
+			document.getElementById("imagen3").style.display = "inline";
+			document.getElementById("copiar").style.display = "none"
+			input.focus();			
+
+		}
+
+
+		else {
+
+
+
+
+			document.getElementById("imagen1").style.display = "none";
+			document.getElementById("imagen2").style.display = "none";
+			document.getElementById("imagen3").style.display = "none";
+			document.getElementById("copiar").style.display = "inline";
+			input.focus()
+			input.value = ""
+
+		}
+			
+	}
+
+	function Desencriptar() {
+
+		input.value = input.value.replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat", "u")
+
+		document.getElementById("rectanguloTexto").textContent = input.value;
+		
+		
+		if (caja.value == "") {
+	
+			document.getElementById("imagen1").style.display = "inline";
+			document.getElementById("imagen2").style.display = "inline";
+			document.getElementById("imagen3").style.display = "inline";
+			document.getElementById("copiar").style.display = "none";
+			input.focus();			
+
+		}
+
+		else {
+
+
+			document.getElementById("imagen1").style.display = "none";
+			document.getElementById("imagen2").style.display = "none";
+			document.getElementById("imagen3").style.display = "none";
+			document.getElementById("copiar").style.display = "inline";
+			input.focus()
+			input.value = ""			
+		}
+	}
+
+	function copy() {
+  		
+  		content = document.getElementById("rectanguloTexto").innerHTML;
+
+  		navigator.clipboard.writeText(content).then(() => {
+  			console.log("texto copiado")
+  		})
+
+  		.catch(err => {
+  			console.log("algo salio mal", err);
+  		})
+
+
+  	}
+
+	button1.onclick = Encriptar;
+
+	button2.onclick = Desencriptar;
+
+	copiar.onclick = copy;
+
+
+
+
+
+
+
+
+
+</script>
